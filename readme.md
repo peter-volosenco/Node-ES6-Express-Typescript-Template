@@ -14,7 +14,6 @@
 
 ### instructions
 ```
-
 npm init -y
 npm i -P express dotenv
 npm i -D typescript @types/express @types/node
@@ -28,8 +27,7 @@ touch index.js
 cd ..
 
 
-
-```
+---
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 
@@ -45,11 +43,11 @@ app.get('/', (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
 });
-```
+---
 
 
 package.json
-```
+---
 {
   "scripts": {
     "build": "npx tsc",
@@ -57,8 +55,7 @@ package.json
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   }
 }
-
-```
+---
 
 
 ```
